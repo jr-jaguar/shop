@@ -1,0 +1,17 @@
+j_rs_shop_homepage:
+    path:     /
+    defaults: { _controller: JRsShopBundle:Page:homepage }
+    requirements:
+                _method:  GET
+
+j_rs_shop_about:
+    path:     /about
+    defaults: { _controller: JRsShopBundle:Page:about }
+    requirements:
+            _method:  GET
+
+j_rs_shop_contacts:
+    path:     /contacts
+    defaults: { _controller: JRsShopBundle:Page:contacts }
+    requirements:
+            _method:  GET

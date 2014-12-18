@@ -1,0 +1,21 @@
+{% extends 'JRsShopBundle::base.html.twig' %}
+{% block title %}
+    <h1>Контакты</h1>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }} {# Подключение файла main.css #}
+    {#<link rel="stylesheet" href="{{ asset('bundles//css/about.css') }}" type="text/css" media="all" />#}
+{% endblock %}
+
+{% block body %}
+
+    <p>ЧП "БоТи"</p>
+    <p>Украина</p>
+    <p>г. Черкассы</p>
+    <p>тел/факс: (0472) 66-96-12
+        66-99-93</p>
+    <p>отдел продаж: 068-106-29-60
+
+        096-546-85-46</p>
+{% endblock %}

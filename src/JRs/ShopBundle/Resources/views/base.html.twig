@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{% block title %}Переменная часть заголовка по умолчанию{% endblock %} - название постоянной части</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% block stylesheets %}
+        {#{% stylesheets 'css/main.css' %}#}
+        <link rel ="stylesheet" href ="{{ asset('bundles/jrsshop/css/main.css') }}" type ="text/css" media ="screen" />
+        {#{% endstylesheets %}#}
+    {% endblock %}
+    <link rel ="shortcut icon" href= "{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div id="topmenu">
+    <a href="{{ path('j_rs_shop_homepage') }}">Главная</a> |
+    <a href="{{ path('j_rs_shop_about') }}">О нас</a> |
+    <a href="{{ path('j_rs_shop_contacts') }}">Контакты</a> |
+    <a href="#">Вход</a>
+</div> <!-- Конец powered -->
+<header id="header">
+    {% include 'JRsShopBundle:Page:header.html.twig' %}
+</header>
+<div id="columns">
+
+    <div id="left">
+        <aside class= "sidebar-left">
+            {% block sidebarleft %}
+                <h2>Категории</h2>
+                {% block navigation %}
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href ="#">Кат1</a></li>
+                            <li><a href ="#">Кат2</a></li>
+                            <li><a href ="#">Кат3</a></li>
+                            <li><a href ="#">Кат4</a></li>
+                        </ul>
+                    </nav>
+                {% endblock %}
+
+            {% endblock %}
+        </aside>
+    </div><!-- Конец левой колонки -->
+
+    <div id="center">
+
+        <section class= "main">
+            {% block body %}
+                <h1>ЦЕНТРАЛЬНАЯ КОЛОНКА</h1>
+
+            {% endblock %}
+        </section> </div> <!-- Конец центральной колонки -->
+
+
+    <div id="right"><aside class="sidebar-right">
+            {% block sidebarright %}
+                <h2>Корзина</h2>
+
+            {% endblock %}
+        </aside>
+    </div> <!-- Конец правой колонки -->
+
+
+</div> <!-- Конец id="columns" -->
+
+<div id="footer"> <!-- Начало подвала -->
+    {% include 'JRsShopBundle:Page:footer.html.twig' %}
+</div> <!-- Конец подвала -->
+
+<div id="powered">
+
+    <a href="http://symfony.in.ua">Главная</a> |
+    <a href="http://symfony.in.ua">О компании</a> |
+    <a href="http://blog.symfony.in.ua/web/contact">Обратная связь</a>
+    <span><a href="http://top.artref.kiev.ua">Дизайн-студия Топ</a> :: Сделано на Symfony2 © Все права защищены </span>
+</div> <!-- Конец powered -->
+
+{% block javascripts %}{% endblock %}
+
+</body>
+</html>

@@ -1,3 +1,7 @@
+j_rs_shop:
+    resource: "@JRsShopBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation
