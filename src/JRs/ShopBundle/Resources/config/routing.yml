@@ -14,4 +14,4 @@ j_rs_shop_contacts:
     path:     /contacts
     defaults: { _controller: JRsShopBundle:Page:contacts }
     requirements:
-            _method:  GET
+            _method:  GET|POST

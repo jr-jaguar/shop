@@ -1,0 +1,24 @@
+form.basic{width: 350px; margin: 0 auto;}
+div#form{float: right}
+div#contact{float: left}
+input#contact_name{margin-left: 60px; width: 180px; border-radius: 5px;border: 1px solid #eee;}
+input#contact_email{margin-left: 49px;width: 180px; border-radius: 5px;border: 1px solid #eee;}
+input#contact_subject{margin-left: 55px;width: 182px; border-radius: 5px;border: 1px solid #eee;}
+textarea#contact_message{margin-left: 14px; height: 150px;width: 180px; border-radius: 5px;border: 1px solid #cecece;}
+label.required{vertical-align: top; margin-top: 12px;}
+div#contact div{margin-top: 10px;}
+input[type="submit"]{width: 85px;}
+lavel[for="contact_message"]{margin-top: 10px;}
+div#submit{width: 85px; margin: 6px auto 0 auto;padding-left: 19px;}
+input, textarea
+{-webkit-box-shadow: 0 0 15px #b1b1b1;
+    -moz-box-shadow: 0 0 15px #b1b1b1;
+    box-shadow: 0 0 15px #b1b1b1;}
+.notice {
+    text-align: center;
+    padding: 10px;
+    background: #DFF2BF;
+    border: 1px solid;
+    color: #71bd21;
+    margin-bottom: 10px;
+    border-radius:5px;}
