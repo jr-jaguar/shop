@@ -15,3 +15,22 @@ j_rs_shop_contacts:
     defaults: { _controller: JRsShopBundle:Page:contacts }
     requirements:
             _method:  GET|POST
+
+j_rs_shop_users_show:
+    path:     /user/{id}
+    defaults: { _controller: JRsShopBundle:Users:showUser }
+    requirements:
+      _method:  GET
+      id: \d+
+
+j_rs_shop_users:
+    path:     /users
+    defaults: { _controller: JRsShopBundle:Users:usersList }
+    requirements:
+      _method:  GET
+
+j_rs_shop_registration:
+    path:     /registration
+    defaults: { _controller: JRsShopBundle:Registration:form }
+    requirements:
+      _method:  GET|POST

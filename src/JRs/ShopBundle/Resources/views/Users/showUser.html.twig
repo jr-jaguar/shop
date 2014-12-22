@@ -1,0 +1,31 @@
+{% extends 'JRsShopBundle::base.html.twig' %}
+{% block title %} {{ user.login }}{% endblock %}
+
+{% block body %}
+<table class="tablebg" width="100%" cellspacing="1">
+    <tr>
+        <th colspan="2" valign="middle">Личные данные</th>
+    </tr>
+    <tr>
+        <td width="35%"><b>Name: </b></td>
+        <td>{{ user.name }}</td>
+    </tr>
+    <tr>
+        <td width="35%"><b>Surname: </b></td>
+        <td>{{ user.surname }}</td>
+    </tr>
+    <tr>
+        <td width="35%"><b>E-mail: </b></td>
+        <td>{{ user.email }}</td>
+    </tr>
+    <tr>
+        <td width="35%"> <b>Bithday: </b></td>
+        <td>{{ user.bithday|date("m/d/Y") }}</td>
+    </tr>
+    <tr>
+        <td width="35%"><b>Date registration </b></td>
+        <td>{{ user.dateRegistration|date('m/d/Y h:iA') }}</td>
+    </tr>
+
+</table>
+{% endblock %}
