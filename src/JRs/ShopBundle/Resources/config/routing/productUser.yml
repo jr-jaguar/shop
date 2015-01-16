@@ -1,0 +1,7 @@
+jrs_product_user:
+    path:     /
+    defaults: { _controller: "JRsShopBundle:ProductUser:index" }
+
+jrs_product_user_show:
+    path:     /{id}/show
+    defaults: { _controller: "JRsShopBundle:ProductUser:show" }

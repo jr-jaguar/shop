@@ -29,16 +29,7 @@
         <aside class= "sidebar-left">
             {% block sidebarleft %}
                 <h2>Категории</h2>
-                {% block navigation %}
-                    <nav>
-                        <ul class="navigation">
-                            <li><a href ="#">Кат1</a></li>
-                            <li><a href ="#">Кат2</a></li>
-                            <li><a href ="#">Кат3</a></li>
-                            <li><a href ="#">Кат4</a></li>
-                        </ul>
-                    </nav>
-                {% endblock %}
+                {% render (controller("JRsShopBundle:Page:navigation")) %}
 
             {% endblock %}
         </aside>

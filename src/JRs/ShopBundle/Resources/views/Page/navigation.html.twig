@@ -1,0 +1,9 @@
+{% block navigation %}
+<nav>
+    <ul class="navigation">
+        {% for category in category %}
+            <li><a href="{{ path('j_rs_shop_category_show', { 'id': category.id }) }}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endblock %}

@@ -3,9 +3,12 @@
 namespace JRs\ShopBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JRs\ShopBundle\JRsShopBundle;
+
+
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="JRs\ShopBundle\Entity\Repository\CategoryRepository")
  * @ORM\Table(name="category")
  */
 class Category {
@@ -85,15 +88,7 @@ class Category {
         return $this;
     }
 
-    /**
-     * Get slug
-     *
-     * @return string 
-     */
-    public function getSlug()
-    {
-        return $this->slug;
-    }
+    
 
     /**
      * Add products
@@ -126,5 +121,24 @@ class Category {
     public function getProducts()
     {
         return $this->products;
+    }
+
+    public function __toString(){
+
+        return $this->getName() ? $this->getName() : "";
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function setSlugValue(){
+        $this->slug = JRs::slugify($this->getName());
     }
 }

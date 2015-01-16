@@ -12,11 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class UserRepository extends EntityRepository
 {
-    public function getUsersList(){
-        $qb=$this->createQueryBuilder('u')
-            ->select('u')
-            ->addOrderBy('u.login', 'DESC');
-
-        return $qb->getQuery()->getResult();
-    }
+//    public function getUsersList(){
+//        $qb=$this->createQueryBuilder('u')
+//            ->select('u')
+//            ->addOrderBy('u.login', 'DESC');
+//
+//        return $qb->getQuery()->getResult();
+//    }
 }

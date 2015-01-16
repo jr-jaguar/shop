@@ -1,0 +1,12 @@
+j_rs_shop_user_show:
+    path:     /{id}/show
+    defaults: { _controller: JRsShopBundle:Users:showUser }
+    requirements:
+      _method:  GET
+      id: \d+
+
+j_rs_shop_users:
+    path:     /
+    defaults: { _controller: JRsShopBundle:Users:index }
+    requirements:
+      _method:  GET

@@ -1,6 +1,6 @@
 {% extends 'JRsShopBundle::base.html.twig' %}
 {% block title %}
-    <h1>Главная</h1>
+    Главная
 {% endblock %}
 
 {% block stylesheets %}
@@ -9,5 +9,14 @@
 {% endblock %}
 
 {% block body %}
-    <h1>HomePage<h1>
+        <table width="100%">
+            <thead>Категории</thead>
+            {% for category in category %}
+                <tr>
+                    <td width="35%">
+                        <h2><a href="{{ path('j_rs_shop_category_show', { 'id': category.id }) }}">{{ category.name }}</a></h2>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
 {% endblock %}

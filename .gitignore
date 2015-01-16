@@ -1,4 +1,8 @@
 /web/bundles/
+/web/*
+/app/*
+/src/Acme/*
+/src/AppBundle/*
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml

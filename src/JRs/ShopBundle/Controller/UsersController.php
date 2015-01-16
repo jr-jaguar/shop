@@ -21,13 +21,18 @@ class UsersController extends Controller{
             'user'=>$user,
         ));
     }
+    /**
+     * Show all users
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
 
-    public function usersListAction(){
-        $em=$this->getDoctrine()->getManager();
-        $users = $em->getRepository('JRsShopBundle:Users')->getUsersList();
+        $users = $em->getRepository('JRsShopBundle:Users')->findAll();
 
         return $this->render('JRsShopBundle:Users:showUsers.html.twig', array(
-            'users'=>$users
+            'users' => $users,
         ));
     }
+
 }

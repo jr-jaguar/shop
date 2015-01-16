@@ -5,7 +5,7 @@
     {% for user in users %}
         <tr>
             <td width="35%">
-                <h2><a href="{{ path('j_rs_shop_users_show', { 'id': user.id }) }}">{{ user.login }}</a></h2>
+                <h2><a href="{{ path('j_rs_shop_user_show', { 'id': user.id }) }}">{{ user.login }}</a></h2>
             </td>
             <td>Зарегестрирован {{ user.dateRegistration|date('h:iA') }}</td>
         </tr>
